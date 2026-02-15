@@ -4,6 +4,7 @@
 # ggbraid <img src="man/figures/logo.png" style="float:right" width="200"/>
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 ggbraid provides a new stat, `stat_braid()`, that extends the
@@ -17,8 +18,8 @@ provides a geom, `geom_braid()`, that wraps `geom_ribbon()` and uses
 You can install the development version of ggbraid from GitHub with:
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("nsgrantham/ggbraid")
+# install.packages("pak")
+pak::pak("pefrens/ggbraid")
 ```
 
 ## Usage
@@ -55,7 +56,7 @@ df_long
 #>  8     8 -0.0947 a    
 #>  9     9  2.02   a    
 #> 10    10 -0.0627 a    
-#> # … with 32 more rows
+#> # ℹ 32 more rows
 ```
 
 And let’s pivot the dataset wider so we can use it with `geom_ribbon()`
@@ -78,7 +79,7 @@ df_wide
 #>  8     8 -0.0947  0.960 
 #>  9     9  2.02   -0.140 
 #> 10    10 -0.0627  0.955 
-#> # … with 11 more rows
+#> # ℹ 11 more rows
 ```
 
 Now let’s draw the two series as lines and fill the area between them
@@ -91,7 +92,7 @@ ggplot() +
   guides(linetype = "none")
 ```
 
-<img src="man/figures/README-geom-ribbon-without-fill-1.png" width="100%" />
+<img src="man/figures/README-geom-ribbon-without-fill-1.png" alt="" width="100%" />
 
 Can we fill the area between the two lines with two different colors?
 One color when the solid line is *above* the dashed line, and a
@@ -107,7 +108,7 @@ ggplot() +
   guides(linetype = "none", fill = "none")
 ```
 
-<img src="man/figures/README-geom-ribbon-with-fill-1.png" width="100%" />
+<img src="man/figures/README-geom-ribbon-with-fill-1.png" alt="" width="100%" />
 
 Chaos.
 
@@ -127,7 +128,7 @@ ggplot() +
 #> `geom_braid()` using method = 'line'
 ```
 
-<img src="man/figures/README-geom-braid-with-fill-1.png" width="100%" />
+<img src="man/figures/README-geom-braid-with-fill-1.png" alt="" width="100%" />
 
 ## Articles
 
